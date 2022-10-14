@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=boolean\ getFlag()
+comment1.params=
+comment1.target=void\ setBomb()
+comment2.params=
+comment2.target=boolean\ getBomb()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ checkMouse()
+comment5.params=block
+comment5.target=void\ openBlock(Block)
+comment6.params=block
+comment6.target=int\ getBombNumber(Block)
+numComments=7
