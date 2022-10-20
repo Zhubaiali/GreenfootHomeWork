@@ -38,12 +38,10 @@ public class Key extends Actor {
 
     // �ټ������play���������������ټ�
     public void play() {
+        setImage(downImage);
         Greenfoot.playSound(sound);
-        setImage(downImage);
-        Greenfoot.delay(100);
+        Greenfoot.delay(10);
         setImage(upImage);
-        Greenfoot.delay(3);
-        setImage(downImage);
     }
 
     // 获取音符名
