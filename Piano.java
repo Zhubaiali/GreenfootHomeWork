@@ -13,7 +13,6 @@ public class Piano extends World {
     public Piano() {
         super(800, 340, 1);
         makeKeys(); // ????makeKeys()?????????????????????????Ðµ????
-
         prepare();
     }
 
@@ -37,11 +36,10 @@ public class Piano extends World {
     }
 
     /**
-     * ¿ªÊ¼Ç°ÏÈÎªÄãµÄ¾ç±¾´´½¨³¡¾°
-     * Ìí¼ÓÔª¼þµ½ÄãµÄ³¡¾°
+     * ï¿½ï¿½Ê¼Ç°ï¿½ï¿½Îªï¿½ï¿½Ä¾ç±¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     * ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
      */
-    private void prepare()
-    {
+    private void prepare() {
         MusicSheet1 musicsheet1 = new MusicSheet1();
         addObject(musicsheet1, 136, 307);
         musicsheet1.setLocation(131, 303);

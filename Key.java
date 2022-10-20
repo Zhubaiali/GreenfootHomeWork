@@ -39,5 +39,10 @@ public class Key extends Actor {
     // �ټ������play���������������ټ�
     public void play() {
         Greenfoot.playSound(sound);
+        setImage(downImage);
+        Greenfoot.delay(100);
+        setImage(upImage);
+        Greenfoot.delay(3);
+        setImage(downImage);
     }
 }
