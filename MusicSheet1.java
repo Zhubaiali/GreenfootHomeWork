@@ -35,19 +35,40 @@ public class MusicSheet1 extends Actor {
 
             for (String note : list) {
 
-                // 根据音符名找到对应的琴键对象
-                // Key key = (Key) getWorld().getObjects(Key.class).
-                //用反射获取世界中的所有琴键对象，然后根据note获取对应的琴键对象。
-                //这里用到了反射，反射是Java中的一个很重要的概念，它可以让我们在运行时获取类的信息，比如类的属性，方法，构造方法等等。那么我知道了属性名，怎么用反射获取对象呢？这里用到了getDeclaredField方法，它可以根据属性名获取属性对象，然后用get方法获取属性值。
+                // 根据音符名找到对应的琴键对象。用反射获取世界中的所有琴键对象，然后根据note获取对应的琴键对象。
 
-                // 根据音符名找到对应的琴键对象
+                /*方法1：在Key里设置getKey返回音符名，然后在这里调用，如果琴键对象的音符名和list里的音符名相同，就返回这个琴键对象
+                 */
                 Key key = (Key) getWorld().getObjects(Key.class).stream()
-                        .filter(k -> k.getNote().equals(note)).findFirst().get();                
+                        .filter(k -> k.getKey().equals(note)).findFirst().get();
 
-                // getDeclaredField(note)
+                /*方法2：不用getKey，Key里面有key属性 ，用getDeclaredField获取key属性*/
+                Key key = (Key) getWorld().getObjects(Key.class).stream()
+                        .filter(k -> {
+                            try {
+                                return k.getClass().getDeclaredField("key").equals(note);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            return false;
+                        }).findFirst().get();
+                        
+                【这两种方法都有NoSuchElementException: No value present异常】
+            
 
-                // 调用琴键对象的play方法
-                key.play();
+
+                
+                // 这里用到了反射，反射是Java中的一个很重要的概念，它可以让我们在运行时获取类的信息，比如类的属性，方法，构造方法等等。那么我知道了属性名，怎么用反射获取对象呢？这里用到了getDeclaredField方法，它可以根据属性名获取属性对象，然后用get方法获取属性值。
+
+                // 根据音符名找到对应的琴键对象
+                // Key key = (Key) getWorld().getObjects(Key.class).stream().filter(k -> k.getKey().equals(note)).findFirst().get();
+
+                //  return k.getClass().getDeclaredField("key").get(k).equals(note);//getDeclaredField("key")获取key属性对象，然后用get方法获取属性值
+
+
+                // 这里有NoSuchElementException.因为stream()返回的是一个Stream对象，而Stream对象是一个延迟加载的对象，它的方法不会立即执行，而是在需要的时候才执行，这里的findFirst方法就是一个延迟加载的方法，它会在需要的时候执行，而这里的需要就是get方法，所以这里会抛出NoSuchElementException异常，因为get方法会立即执行，而此时Stream对象还没有执行，所以会抛出异常。那要怎么解决呢？这里用到了findFirst方法，它会在Stream对象执行完毕后返回第一个元素，这样就不会抛出异常了。
+
+                key.play();// 调用琴键对象的play方法
             }
 
             // if (Greenfoot.mouseClicked(this)) {

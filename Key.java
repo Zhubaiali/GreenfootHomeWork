@@ -21,7 +21,7 @@ public class Key extends Actor {
     }
 
     // public Key(String keyName) {
-    //     key = keyName;
+    // key = keyName;
     // }// 这里有空指针异常
 
     public void act() {
@@ -45,4 +45,10 @@ public class Key extends Actor {
         Greenfoot.delay(3);
         setImage(downImage);
     }
+
+    // 获取音符名
+    public String getKey() {
+        return key;
+    }
+
 }
