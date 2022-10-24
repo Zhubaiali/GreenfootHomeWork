@@ -26,6 +26,5 @@ public class Body extends Actor
     
     public void act() 
     {
-  
     }    
 }
