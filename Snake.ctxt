@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Snake
+comment0.text=\r\n\ \ \u8D2A\u98DF\u86C7\u7C7B\uFF0C\u7528\u6765\u63A7\u5236\u86C7\u5934\u79FB\u52A8\uFF0C\u83B7\u53D6\u98DF\u7269\uFF0C\u5E76\u5BF9\u86C7\u8EAB\u8FDB\u884C\u7BA1\u7406\r\n
+comment1.params=
+comment1.target=Snake()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkFood()
+comment4.params=
+comment4.target=void\ updateBody()
+comment5.params=
+comment5.target=void\ move()
+comment6.params=
+comment6.target=void\ checkGameOver()
+comment7.params=
+comment7.target=void\ checkKeydown()
+numComments=8

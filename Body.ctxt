@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Body
+comment0.text=\r\n\ \u86C7\u8EAB\u7C7B\uFF0C\u7528\u6765\u7EC4\u6210\u8D2A\u98DF\u86C7\u7684\u8EAB\u4F53\r\n
+comment1.params=x\ y
+comment1.target=Body(int,\ int)
+comment2.params=
+comment2.target=int\ getLocX()
+comment3.params=
+comment3.target=int\ getLocY()
+comment4.params=
+comment4.target=void\ act()
+numComments=5
