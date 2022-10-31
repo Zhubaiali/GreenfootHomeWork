@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Bar
+comment0.text=\r\n\ \u6321\u677F\u7C7B\uFF0C\u7528\u6765\u53CD\u5F39\u5C0F\u7403\r\n
+comment1.params=
+comment1.target=Bar()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=int\ getHeight()
+comment4.params=
+comment4.target=void\ checkKeys()
+numComments=5

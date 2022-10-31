@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=ScoreBoard
+comment0.text=\r\n\ \u8BA1\u5206\u677F\u7C7B\uFF0C\u7528\u6765\u6E38\u620F\u7ED3\u675F\u540E\u663E\u793A\u603B\u5206\u6570\r\n
+comment1.params=score
+comment1.target=ScoreBoard(int)
+numComments=2

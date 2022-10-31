@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Brick
+comment0.text=\r\n\ \u7816\u5757\u7C7B\uFF0C\u7528\u6765\u4F9B\u5C0F\u7403\u6572\u51FB\r\n
+comment1.params=
+comment1.target=Brick()
+comment2.params=hard
+comment2.target=Brick(int)
+comment3.params=
+comment3.target=int\ getRadiusX()
+comment4.params=
+comment4.target=int\ getRadiusY()
+numComments=5
